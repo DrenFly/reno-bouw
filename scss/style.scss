@@ -71,11 +71,19 @@ body {
 
         .header-content {
             text-align: center;
-            padding-top: 20%;
+            padding-top: 10%;
+
+            .welcome {
+                font-size: 3rem;
+            }
 
             h1 {
-                font-size: 4rem;
+                font-size: 5rem;
                 line-height: 1.2rem;
+            }
+
+            .letter {
+                color: $baseColor2;
             }
         }
     }
@@ -86,6 +94,7 @@ body {
 }
 
 .container {
+    display: grid;
     max-width: $max-width;
     padding: 0 1.5rem;
     margin: auto;
