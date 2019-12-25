@@ -1,0 +1,70 @@
+
+
+// General Styles
+$font-primary: 'Dosis', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+
+$baseColor1: #3D4F59; //Dark Blue
+$baseColor2: #f05f40; //orange
+$baseColor3: #777; //Dark Grey
+$baseColor4: #fff; //Off White
+$baseColor5: #000; //Black
+$baseColor6: #f7f7f7; //Light Grey
+$baseColor7: #eee; //Lightish Grey
+$baseColor8: #333; //Darker Grey
+
+$header-img: url("../img/head.jpg");
+
+$max-width: 1900px;
+
+
+//Button Style
+
+%btn-shared {
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: all 0.4s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.btn {
+
+    &-main {
+        @extend %btn-shared;
+        color: $baseColor1;
+        background-color: $baseColor2;
+    }
+
+    &-light {
+        @extend %btn-shared;
+        color: $baseColor4;
+        background-color: $baseColor2;
+
+        &:hover {
+            background-color: darken($baseColor2, 50%);
+        }
+    }
+
+    &-dark {
+        @extend %btn-shared;
+        color: $baseColor2;
+        background-color: $baseColor1;
+
+        &:hover {
+            background-color: lighten($baseColor1, 50%);
+        }
+    }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+    background-color: brightness(0.6);
+}
+
+
+
