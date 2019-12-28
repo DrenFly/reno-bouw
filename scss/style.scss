@@ -100,3 +100,51 @@ body {
     margin: auto;
     overflow: hidden;
 }
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, minmax(20vh, max-content));
+    grid-gap: 1rem;
+    font-size: 3rem;
+    max-width: $max-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.main {
+    background-color: $baseColor3;
+    grid-column: 1 / 8;
+    font-size: 1rem;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content min-content;
+    grid-auto-flow: row;
+    background-color: $baseColor6;
+    grid-column: 1 / 5;
+
+    .box {
+        margin: 1rem;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+.testimonials {
+    background-color: $baseColor7;
+    grid-column: 5 / 8;
+    font-size: 1rem;
+}
+
+.footer-main {
+    background-color: $baseColor8;
+    grid-column: 1 / 8;
+    font-size: 1rem;    
+    
+}
