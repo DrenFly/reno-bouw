@@ -126,20 +126,47 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content min-content;
     grid-auto-flow: row;
-    background-color: $baseColor6;
+    grid-gap: 1rem;
+    background-color: $baseColor4;
     grid-column: 1 / 5;
+
 
     .box {
         margin: 1rem;
         padding: 1rem;
         font-size: 1rem;
+        background-color: $baseColor6;
+        box-shadow: 
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+        &:hover {
+            @include easeOut();
+            transform: scale(1.05);
+            
+        }
+        
     }
+}
+
+.iconbox {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 90px;
+    background-color: #3D4F59;
 }
 
 .testimonials {
     background-color: $baseColor7;
     grid-column: 5 / 8;
     font-size: 1rem;
+
+    p {
+        font-size: 1.5rem;
+    }
 }
 
 .footer-main {
@@ -147,4 +174,24 @@ body {
     grid-column: 1 / 8;
     font-size: 1rem;    
     
+    .foot-nav {
+        display: flex;
+        flex-flow: row;
+        
+
+        list-style: none;
+
+        a {
+            background-color: $baseColor3;
+            text-decoration: none;
+            margin: 1rem;
+            
+            text-align: center;
+            li {
+                color: $baseColor1;
+                padding:1rem;
+                
+            }
+        }
+    }
 }

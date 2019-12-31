@@ -10,13 +10,11 @@
 .btn-main {
   color: #3D4F59;
   background-color: #f05f40; }
-
 .btn-light {
   color: #fff;
   background-color: #f05f40; }
   .btn-light:hover {
     background-color: #2d0b04; }
-
 .btn-dark {
   color: #f05f40;
   background-color: #3D4F59; }
@@ -28,7 +26,9 @@ a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: brightness(0.6); }
 
-* *::before *::after {
+*
+*::before
+*::after {
   margin: 0;
   padding: 0; }
 
@@ -111,19 +111,50 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content min-content;
   grid-auto-flow: row;
-  background-color: #f7f7f7;
+  grid-gap: 1rem;
+  background-color: #fff;
   grid-column: 1 / 5; }
   .services .box {
     margin: 1rem;
     padding: 1rem;
-    font-size: 1rem; }
+    font-size: 1rem;
+    background-color: #f7f7f7;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3); }
+    .services .box:hover {
+      transition: all 0.3s ease-out;
+      transform: scale(1.05); }
+
+.iconbox {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 90px;
+  background-color: #3D4F59; }
 
 .testimonials {
   background-color: #eee;
   grid-column: 5 / 8;
   font-size: 1rem; }
+  .testimonials p {
+    font-size: 1.5rem; }
 
 .footer-main {
   background-color: #333;
   grid-column: 1 / 8;
   font-size: 1rem; }
+  .footer-main .foot-nav {
+    display: flex;
+    flex-flow: row;
+    list-style: none; }
+    .footer-main .foot-nav a {
+      background-color: #777;
+      text-decoration: none;
+      margin: 1rem;
+      text-align: center; }
+      .footer-main .foot-nav a li {
+        color: #3D4F59;
+        padding: 1rem; }
+
+/*# sourceMappingURL=style.css.map */

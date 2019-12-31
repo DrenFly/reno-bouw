@@ -18,6 +18,7 @@ $header-img: url("../img/head.jpg");
 
 $max-width: 1900px;
 
+@mixin easeOut {transition: all 0.3s ease-out}
 
 //Button Style
 
