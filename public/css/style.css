@@ -33,7 +33,7 @@ input[class^="btn-"]:hover {
   padding: 0; }
 
 body {
-  background-color: #3D4F59;
+  background-color: #fff;
   font-family: 'Dosis', sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -81,13 +81,6 @@ body {
     #header-home .header-content .letter {
       color: #f05f40; }
 
-.container {
-  display: grid;
-  max-width: 1900px;
-  padding: 0 1.5rem;
-  margin: auto;
-  overflow: hidden; }
-
 .body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -107,10 +100,33 @@ body {
   grid-column: 1 / 8;
   font-size: 1.5rem;
   padding: 2rem;
-  color: #fff; }
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center; }
+  .main .section-heading {
+    grid-row: 1;
+    grid-column: 2 / span 2; }
+  .main .p1 {
+    grid-row: 2;
+    grid-column: 2 / span 2; }
+  .main .p2 {
+    grid-row: 3;
+    grid-column: 2 / span 2; }
+  .main .p3 {
+    grid-row: 4;
+    grid-column: 2 / span 2; }
   .main p {
     margin: 0;
-    padding: 0; }
+    padding: 1rem 0; }
+  .main .imgHead1 {
+    grid-row: 2 / span 2;
+    grid-column: 1; }
+  .main .imgHead2 {
+    grid-row: 2 / span 2;
+    grid-column: 4; }
 
 .services {
   display: grid;
@@ -173,12 +189,12 @@ body {
   display: grid;
   grid-template-rows: min-content repeat(3, 1fr);
   align-items: center; }
-  .testimonials h1 {
+  .testimonials h1, .testimonials h2 {
     border-bottom: 3px #f05f40 solid; }
   .testimonials p {
     font-size: 1.5rem;
     padding: 0 1rem;
-    border-bottom: 3px #f05f40 solid; }
+    border-top: 3px #f05f40 solid; }
     .testimonials p::before {
       content: open-quote; }
     .testimonials p::after {
@@ -190,7 +206,7 @@ body {
   font-size: 1rem; }
   .footer-main h1:hover, .footer-main p:hover {
     color: #f05f40;
-    transition-duration: 1s;
+    transition-duration: 0.7s;
     transition-timing-function: ease-in-out; }
   .footer-main .foot-nav {
     display: grid; }
