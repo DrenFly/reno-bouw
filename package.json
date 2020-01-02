@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o public/css/ --recursive"
+    "sass": "node-sass -w scss/ -o public/css/ --recursive",
+    "deploy": "gh-pages -d public"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "homepage": "https://drenfly.github.io/reno-bouw/",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  },
   "devDependencies": {
     "node-sass": "^4.13.0"
   }
