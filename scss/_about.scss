@@ -1,0 +1,144 @@
+
+#about {
+    max-width: $max-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 2rem;
+    box-shadow: 5px 10px 30px $baseColor8;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin-top: 2rem;
+    border-bottom: 3px $baseColor2 solid; 
+    
+
+    .space {
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            border-bottom: 3px $baseColor2 solid; 
+
+        }
+
+        p {
+            font-size: 2rem;
+            width: 100%;
+            text-align: left;
+            padding: 1rem;
+        }
+
+        blockquote {
+            font-size: 3rem;
+
+                &::before {
+                    content: open-quote;
+                }
+
+                &::after {
+                    content: close-quote;
+                }
+    }
+        
+        .about-img {
+            width: 100%;
+        }
+      
+    }
+}
+
+.bar {
+    height: 15vh;
+    background-color: $baseColor1;
+}
+
+.projwf {
+    display: grid;
+    grid-template-rows: 10vh repeat(6, min-content);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+    margin-top: 10vh;
+    border-bottom: 5px $baseColor2 solid; 
+    
+    #step1 {
+        font-size: 2rem;
+        font-weight: 900;
+        grid-row: 2;
+        grid-column: 1 / span 2;
+    }
+
+    #step2 {
+        font-size: 2rem;
+        font-weight: 900;
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    #step3 {
+        font-size: 2rem;
+        font-weight: 900;
+        grid-row: 4;
+        grid-column: 3;
+    }
+
+    #step4 {
+        font-size: 2rem;
+        font-weight: 900;
+        grid-row: 5;
+        grid-column: 4;
+    }
+
+    #step5 {
+        font-size: 2rem;
+        font-weight: 900;
+        grid-row: 6;
+        grid-column: 5;
+    }
+
+    #arrow1 {
+        grid-row: 3;
+        grid-column: 1;        
+    }
+
+    #arrow2 {
+        grid-row: 4;
+        grid-column: 2;        
+    }
+    #arrow3 {
+        grid-row: 5;
+        grid-column: 3;        
+    }
+    #arrow4 {
+        grid-row: 6;
+        grid-column: 4;        
+    }
+
+    .right {
+        height: 60%;
+        width: 70%;    
+    }
+
+    
+}
+
+.howwework {
+    font-size: 2rem;
+    //text-align: center;
+    //vertical-align: middle;
+    grid-row: 1;
+    grid-column: 1 / -1;
+    
+    
+
+    h1 {
+        border-bottom: 3px $baseColor2 solid;
+        padding: 0;
+        margin: 0;
+    }
+    
+}

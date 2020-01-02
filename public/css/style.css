@@ -26,6 +26,100 @@ a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: brightness(0.6); }
 
+#about {
+  max-width: 1900px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 2rem;
+  box-shadow: 5px 10px 30px #333; }
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+  border-bottom: 3px #f05f40 solid; }
+  .about .space h1 {
+    font-size: 4rem;
+    text-align: center;
+    border-bottom: 3px #f05f40 solid; }
+  .about .space p {
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+    padding: 1rem; }
+  .about .space blockquote {
+    font-size: 3rem; }
+    .about .space blockquote::before {
+      content: open-quote; }
+    .about .space blockquote::after {
+      content: close-quote; }
+  .about .space .about-img {
+    width: 100%; }
+
+.bar {
+  height: 15vh;
+  background-color: #3D4F59; }
+
+.projwf {
+  display: grid;
+  grid-template-rows: 10vh repeat(6, min-content);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+  margin-top: 10vh;
+  border-bottom: 5px #f05f40 solid; }
+  .projwf #step1 {
+    font-size: 2rem;
+    font-weight: 900;
+    grid-row: 2;
+    grid-column: 1 / span 2; }
+  .projwf #step2 {
+    font-size: 2rem;
+    font-weight: 900;
+    grid-row: 3;
+    grid-column: 2; }
+  .projwf #step3 {
+    font-size: 2rem;
+    font-weight: 900;
+    grid-row: 4;
+    grid-column: 3; }
+  .projwf #step4 {
+    font-size: 2rem;
+    font-weight: 900;
+    grid-row: 5;
+    grid-column: 4; }
+  .projwf #step5 {
+    font-size: 2rem;
+    font-weight: 900;
+    grid-row: 6;
+    grid-column: 5; }
+  .projwf #arrow1 {
+    grid-row: 3;
+    grid-column: 1; }
+  .projwf #arrow2 {
+    grid-row: 4;
+    grid-column: 2; }
+  .projwf #arrow3 {
+    grid-row: 5;
+    grid-column: 3; }
+  .projwf #arrow4 {
+    grid-row: 6;
+    grid-column: 4; }
+  .projwf .right {
+    height: 60%;
+    width: 70%; }
+
+.howwework {
+  font-size: 2rem;
+  grid-row: 1;
+  grid-column: 1 / -1; }
+  .howwework h1 {
+    border-bottom: 3px #f05f40 solid;
+    padding: 0;
+    margin: 0; }
+
 *
 *::before
 *::after {
@@ -43,7 +137,9 @@ body {
   width: 70px;
   height: 70px;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 10px; }
 
 #main-nav {
   display: flex;
@@ -80,6 +176,9 @@ body {
       line-height: 1.2rem; }
     #header-home .header-content .letter {
       color: #f05f40; }
+#header-inner {
+  background: url("../img/head.jpg") no-repeat 20% 30%/cover;
+  height: 5.5rem; }
 
 .body {
   display: grid;
@@ -203,30 +302,33 @@ body {
 .footer-main {
   background-color: #333;
   grid-column: 1 / 8;
-  font-size: 1rem; }
+  font-size: 1rem;
+  padding: 2rem;
+  margin-top: 10%; }
   .footer-main h1:hover, .footer-main p:hover {
     color: #f05f40;
-    transition-duration: 0.7s;
+    transition-duration: 0.5s;
     transition-timing-function: ease-in-out; }
-  .footer-main .foot-nav {
-    display: grid; }
-    .footer-main .foot-nav ul {
-      display: grid;
-      grid-template-rows: min-content;
-      grid-template-columns: repeat(4, 1fr);
-      list-style: none; }
-    .footer-main .foot-nav li {
-      background-color: #777;
-      margin: 1rem; }
-      .footer-main .foot-nav li a {
-        color: #333;
-        padding: 1rem;
-        text-decoration: none;
-        font-size: 2rem;
-        border-bottom: 3px transparent solid; }
-        .footer-main .foot-nav li a:hover {
-          background-color: #aaaaaa;
-          border-color: #f05f40;
-          transition: all 0.4s ease-out; }
+  .footer-main .foot-nav ul {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    padding: 0;
+    grid-gap: 3vw; }
+  .footer-main .foot-nav li {
+    background-color: #777;
+    margin: 0.5rem; }
+    .footer-main .foot-nav li a {
+      color: #333;
+      padding: 0.3rem;
+      text-decoration: none;
+      font-size: 2rem;
+      border-bottom: 3px transparent solid; }
+      .footer-main .foot-nav li a:hover {
+        color: #f05f40;
+        background-color: #444444;
+        border-color: #f05f40;
+        transition: all 0.4s ease-out; }
 
 /*# sourceMappingURL=style.css.map */
