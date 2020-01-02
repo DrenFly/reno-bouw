@@ -94,7 +94,9 @@ body {
     &-inner {
         background: $header-img no-repeat 20% 30% /cover;
         height: 5.5rem;
-
+        position: fixed;
+        width: 100vw;
+        border-bottom: 3px $baseColor2 solid;
     }
 }
 

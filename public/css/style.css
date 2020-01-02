@@ -61,15 +61,19 @@ input[class^="btn-"]:hover {
 
 .bar {
   height: 15vh;
-  background-color: #3D4F59; }
+  background-color: #3D4F59;
+  border-bottom: 5px #f05f40 solid; }
 
 .projwf {
   display: grid;
   grid-template-rows: 10vh repeat(6, min-content);
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
   margin-top: 10vh;
   border-bottom: 5px #f05f40 solid; }
+  .projwf .step {
+    border-left: 5px #3D4F59 solid;
+    border-bottom: 5px #3D4F59 solid;
+    padding: 20px; }
   .projwf #step1 {
     font-size: 2rem;
     font-weight: 900;
@@ -79,22 +83,22 @@ input[class^="btn-"]:hover {
     font-size: 2rem;
     font-weight: 900;
     grid-row: 3;
-    grid-column: 2; }
+    grid-column: 2 / span 2; }
   .projwf #step3 {
     font-size: 2rem;
     font-weight: 900;
     grid-row: 4;
-    grid-column: 3; }
+    grid-column: 3 / span 2; }
   .projwf #step4 {
     font-size: 2rem;
     font-weight: 900;
     grid-row: 5;
-    grid-column: 4; }
+    grid-column: 4 / span 2; }
   .projwf #step5 {
     font-size: 2rem;
     font-weight: 900;
     grid-row: 6;
-    grid-column: 5; }
+    grid-column: 5 / span 2; }
   .projwf #arrow1 {
     grid-row: 3;
     grid-column: 1; }
@@ -110,6 +114,28 @@ input[class^="btn-"]:hover {
   .projwf .right {
     height: 60%;
     width: 70%; }
+  .projwf .idea {
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 35%; }
+  .projwf #ideas {
+    grid-row: 2;
+    grid-column: 6; }
+  .projwf #collab {
+    grid-row: 3;
+    grid-column: 6; }
+  .projwf #ready {
+    grid-row: 4;
+    grid-column: 6; }
+  .projwf #material {
+    grid-row: 5;
+    grid-column: 6; }
+  .projwf #exec {
+    grid-row: 6;
+    grid-column: 1 / span 2; }
 
 .howwework {
   font-size: 2rem;
@@ -178,7 +204,10 @@ body {
       color: #f05f40; }
 #header-inner {
   background: url("../img/head.jpg") no-repeat 20% 30%/cover;
-  height: 5.5rem; }
+  height: 5.5rem;
+  position: fixed;
+  width: 100vw;
+  border-bottom: 3px #f05f40 solid; }
 
 .body {
   display: grid;
