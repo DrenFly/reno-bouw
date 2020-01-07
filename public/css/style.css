@@ -214,7 +214,7 @@ input[class^="btn-"]:hover {
       border: 5px #3D4F59 solid; }
     #gallery .gallery1 #pic10 {
       grid-column: 4;
-      grid-row: 1;
+      grid-row: 1 / span 3;
       border: 5px #3D4F59 solid; }
     #gallery .gallery1 #pic11 {
       grid-column: 5 / span 2;
@@ -232,6 +232,70 @@ input[class^="btn-"]:hover {
       grid-column: 7 / span 2;
       grid-row: 7 / span 2;
       border: 5px #3D4F59 solid; }
+  #gallery .popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(61, 79, 89, 0.9);
+    opacity: 0;
+    visibility: hidden; }
+    #gallery .popup:target {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.4s ease-out; }
+    #gallery .popup .close:link, #gallery .popup .close:visited {
+      color: #f7f7f7;
+      text-decoration: none;
+      font-size: 2rem;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      line-height: 2.5rem;
+      transition: all 0.4s ease-out;
+      z-index: 3; }
+    #gallery .popup .close:hover {
+      color: #f05f40;
+      transition: all 0.4s ease-out; }
+    #gallery .popup .next:link, #gallery .popup .next:visited {
+      color: #f7f7f7;
+      text-decoration: none;
+      font-size: 3rem;
+      position: absolute;
+      top: 2.5rem;
+      right: 5.5rem;
+      line-height: 2.5rem;
+      transition: all 0.4s ease-out;
+      z-index: 3; }
+    #gallery .popup .next:hover {
+      color: #f05f40;
+      transition: all 0.4s ease-out; }
+    #gallery .popup .back:link, #gallery .popup .back:visited {
+      color: #f7f7f7;
+      text-decoration: none;
+      font-size: 3rem;
+      position: absolute;
+      top: 2.5rem;
+      right: 7.5rem;
+      line-height: 2.5rem;
+      transition: all 0.4s ease-out;
+      z-index: 3; }
+    #gallery .popup .back:hover {
+      color: #f05f40;
+      transition: all 0.4s ease-out; }
+    #gallery .popup__img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 90%;
+      background-color: #f05f40;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5); }
+      #gallery .popup__img img {
+        min-height: 100%;
+        border: 10px #f05f40 solid;
+        max-height: 100%; }
   #gallery .gallery-heading2 {
     font-size: 3rem;
     grid-row: 3;
@@ -359,7 +423,7 @@ body {
 #header-home {
   background: url("../img/head.jpg") no-repeat center center/cover;
   height: 100vh;
-  color: #fff; }
+  color: #f7f7f7; }
   #header-home .header-content {
     text-align: center;
     padding-top: 10%; }

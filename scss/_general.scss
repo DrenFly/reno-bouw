@@ -20,6 +20,13 @@ $max-width: 2300px;
 
 @mixin easeOut {transition: all 0.4s ease-out}
 
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 //Button Style
 
 %btn-shared {

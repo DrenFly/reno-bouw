@@ -71,7 +71,7 @@ body {
     &-home {
         background: $header-img no-repeat center center/cover;
         height: 100vh;
-        color: #fff;
+        color: $baseColor6;
 
         .header-content {
             text-align: center;
