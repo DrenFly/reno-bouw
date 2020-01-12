@@ -1,6 +1,7 @@
 @import "general";
 @import "about";
 @import "gallery";
+@import "contact";
 
 * 
 *::before
@@ -284,7 +285,7 @@ body {
 
         &:hover {
             color: $baseColor2;
-            transition-duration: 0.5s;
+            transition-duration: 0.4s;
             transition-timing-function: ease-in-out;
         }
     }
@@ -306,22 +307,24 @@ body {
 
         li {
             background-color: $baseColor3;
-            margin: 0.5rem;
+            margin: 0;
+            padding: 0;
+            border-bottom: 3px transparent solid; 
+
+            &:hover {
+                color: $baseColor2;
+                background-color: darken($baseColor3, 20%);
+                border-color: $baseColor2;
+                @include easeOut();
+            }
             
                 
             a {
-                color: $baseColor8;
-                padding: 0.3rem;
+                color: inherit;
+                width: 100%;
+                padding: 0;
                 text-decoration: none;
-                font-size: 2rem;
-                border-bottom: 3px transparent solid;         
-                
-                &:hover {
-                    color: $baseColor2;
-                    background-color: darken($baseColor3, 20%);
-                    border-color: $baseColor2;
-                    @include easeOut();
-                }
+                font-size: 2rem;    
             }
         }
     }
