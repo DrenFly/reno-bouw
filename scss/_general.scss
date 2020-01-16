@@ -74,5 +74,30 @@ input[class^="btn-"]:hover {
     background-color: brightness(0.6);
 }
 
+$show-contact-image: true;
+$contact-image: url("../img/AMSbg.png");
 
+@mixin background {
+    @if $show-contact-image {
+    &#contact {
+        background: $contact-image;
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: -20;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($baseColor1, 0.5);
+            z-index: -10;
+            
+        }
+    }
+}
+
+}
 
