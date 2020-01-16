@@ -83,7 +83,9 @@ $contact-image: url("../img/AMSbg.png");
         background: $contact-image;
         background-attachment: fixed;
         background-size: cover;
-        z-index: -20;
+        position: relative;
+        opacity: 0.5;
+        z-index: -2;
 
         &:after {
             content: "";
@@ -93,7 +95,7 @@ $contact-image: url("../img/AMSbg.png");
             width: 100%;
             height: 100%;
             background: rgba($baseColor1, 0.5);
-            z-index: -10;
+            z-index: -1;
             
         }
     }

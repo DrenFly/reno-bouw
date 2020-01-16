@@ -1,9 +1,14 @@
 #contact-page {
     background-color: $baseColor1;
     width: 100vw;
+    
+    
+    
 }
 
+
 .contact-body {
+    //@include background;
     max-width: $max-width;
     padding: 0 1.5rem;
     margin: auto;
@@ -13,22 +18,24 @@
     margin-top: 15vh;
     margin-bottom: 15vh;
     color: $baseColor6;
-    background: url("../img/AMSbg.PNG");
+    //opacity: 0.5;
+    background-image: url("../img/AMSbg.PNG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
 
     h1 {
         font-size: 5rem;
-                
+           
     }
 }
 
 .form-body {        
         background-color: rgba($baseColor3, 0.8);    
         margin: 2rem;
-
+        
 }
 
 input {
@@ -48,6 +55,7 @@ textarea {
         grid-gap: 2rem;
         justify-content: space-around;
         margin: 0px 2rem;
+        
         
 
         .detail {

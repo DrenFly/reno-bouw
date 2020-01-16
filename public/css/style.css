@@ -60,20 +60,42 @@ input[class^="btn-"]:hover {
     width: 100%; }
 
 .bar {
-  height: 15vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15vh;
+  height: 25vh;
   background-color: #3D4F59;
   border-bottom: 5px #f05f40 solid; }
+  .bar .profimg img {
+    max-height: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    border: 5px #f05f40 solid;
+    margin-top: 2vh; }
+  .bar .profimg p {
+    color: #eee;
+    font-size: 1.5rem; }
+  .bar #karol {
+    grid-column: 1;
+    grid-row: 1; }
+  .bar #iwona {
+    grid-column: 2;
+    grid-row: 1; }
+  .bar #lena {
+    grid-column: 3;
+    grid-row: 1; }
 
 .projwf {
   display: grid;
   grid-template-rows: 10vh repeat(6, min-content);
   grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2rem;
   margin-top: 10vh;
   border-bottom: 5px #f05f40 solid; }
   .projwf .step {
-    border-left: 5px #3D4F59 solid;
-    border-bottom: 5px #3D4F59 solid;
-    padding: 20px; }
+    border-left: 8px #3D4F59 solid;
+    padding: 20px;
+    box-shadow: 5px 10px 30px #3D4F59; }
   .projwf #step1 {
     font-size: 2rem;
     font-weight: 900;
@@ -99,42 +121,17 @@ input[class^="btn-"]:hover {
     font-weight: 900;
     grid-row: 6;
     grid-column: 5 / span 2; }
-  .projwf #arrow1 {
+  .projwf #stepimg1 {
     grid-row: 3;
-    grid-column: 1; }
-  .projwf #arrow2 {
-    grid-row: 4;
+    grid-column: 5 / span 2; }
+  .projwf #stepimg2 {
+    grid-row: 6;
     grid-column: 2; }
-  .projwf #arrow3 {
-    grid-row: 5;
-    grid-column: 3; }
-  .projwf #arrow4 {
-    grid-row: 6;
-    grid-column: 4; }
-  .projwf .right {
-    height: 60%;
-    width: 70%; }
-  .projwf .idea {
-    min-height: 100%;
-    min-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 35%; }
-  .projwf #ideas {
+  .projwf #stepimg3 {
     grid-row: 2;
-    grid-column: 6; }
-  .projwf #collab {
-    grid-row: 3;
-    grid-column: 6; }
-  .projwf #ready {
-    grid-row: 4;
-    grid-column: 6; }
-  .projwf #material {
+    grid-column: 4; }
+  .projwf #stepimg4 {
     grid-row: 5;
-    grid-column: 6; }
-  .projwf #exec {
-    grid-row: 6;
     grid-column: 1 / span 2; }
 
 .howwework {
@@ -420,7 +417,7 @@ input[class^="btn-"]:hover {
   margin-top: 15vh;
   margin-bottom: 15vh;
   color: #f7f7f7;
-  background: url("../img/AMSbg.PNG");
+  background-image: url("../img/AMSbg.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

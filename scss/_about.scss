@@ -53,23 +53,55 @@
 }
 
 .bar {
-    height: 15vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15vh;
+    height: 25vh;
     background-color: $baseColor1;
     border-bottom: 5px $baseColor2 solid;
+
+    .profimg img {
+        max-height: 100%;
+        max-width: 250px;
+        border-radius: 50%;
+        border: 5px $baseColor2 solid;
+        margin-top: 2vh;
+    }
+
+    .profimg p {
+        color: $baseColor7;
+        font-size: 1.5rem;
+    }
+
+    #karol {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #iwona {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #lena {
+        grid-column: 3;
+        grid-row: 1;
+    }
 }
 
 .projwf {
     display: grid;
     grid-template-rows: 10vh repeat(6, min-content);
     grid-template-columns: repeat(6, 1fr);
-    //grid-gap: 2rem;
+    grid-gap: 2rem;
     margin-top: 10vh;
     border-bottom: 5px $baseColor2 solid; 
 
     .step {
-        border-left: 5px $baseColor1 solid;
-        border-bottom: 5px $baseColor1 solid;
+        border-left: 8px $baseColor1 solid;
+        //border-bottom: 5px $baseColor1 solid;
         padding: 20px;
+        box-shadow: 5px 10px 30px $baseColor1;
     }
     
     #step1 {
@@ -107,62 +139,27 @@
         grid-column: 5 / span 2;
     }
 
-    #arrow1 {
+    #stepimg1 {
         grid-row: 3;
-        grid-column: 1;        
+        grid-column: 5 / span 2;
     }
 
-    #arrow2 {
-        grid-row: 4;
-        grid-column: 2;        
-    }
-    #arrow3 {
-        grid-row: 5;
-        grid-column: 3;        
-    }
-    #arrow4 {
+    #stepimg2 {
         grid-row: 6;
-        grid-column: 4;        
+        grid-column: 2;
     }
 
-    .right {
-        height: 60%;
-        width: 70%;    
-    }
-
-    .idea {
-        min-height: 100%;
-        min-width: 100%;    
-        overflow: hidden;
-        max-height: 100%;
-        max-width: 100%;  
-        border-radius: 35%;    
-    }
-
-    #ideas {
+    #stepimg3 {
         grid-row: 2;
-        grid-column: 6;
+        grid-column: 4;
     }
 
-    #collab {
-        grid-row: 3;
-        grid-column: 6;
-    }
-
-    #ready {
-        grid-row: 4;
-        grid-column: 6;
-    }
-
-    #material {
+    #stepimg4 {
         grid-row: 5;
-        grid-column: 6;
-    }
-
-    #exec {
-        grid-row: 6;
         grid-column: 1 / span 2;
     }
+
+    
 
     
 }
