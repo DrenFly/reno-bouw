@@ -1,0 +1,131 @@
+//Work Flow Start
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto repeat(5, 1fr) auto;
+    padding-top: 6rem;
+    background-color: $color1;
+    
+
+
+    & .tcard {
+        padding: 2rem;
+        margin: 1rem;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: #eeeeee;
+        font-size: 1.6rem;
+        
+
+        & .date-icon {            
+            color: $color2;
+            padding-bottom: 2rem;
+        }
+
+        
+    }
+
+    & .tcard1 {
+        grid-row: 2;
+        grid-column: 1;
+        text-align: end;
+    }
+
+    & .tcard2 {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    & .tcard3 {
+        grid-row: 4;
+        grid-column: 1;
+        text-align: end;
+    }
+
+    & .tcard4 {
+        grid-row: 5;
+        grid-column: 2;
+    }
+
+    & .tcard5 {
+        grid-row: 6;
+        grid-column: 1;
+        text-align: end;
+    }
+
+    & .tcard6 {
+        grid-row: 7;
+        grid-column: span 2;
+        text-align: center;
+        background-image: url("../img/construct.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        font-size: clamp(2rem, 6vw, 6rem);
+        align-self: center;
+    }
+        
+}
+
+
+
+.timeline-heading {
+    grid-column: 1 / span 2;
+    text-align: center;
+    align-items: center;
+    padding: 6rem;
+    color: $color2;
+    font-size: 2.5rem;
+
+    @include mediaSm {
+        font-size: 1.2rem;
+        padding: 2rem;
+    }
+}
+
+//Counter Styles
+.counters {
+    padding: 3rem;
+    background-color: $color1;
+    
+}
+
+.countcon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    justify-content: space-between;
+    text-align: center;
+    padding: 4rem 0;
+    color: #eeeeee;
+    align-items: center;
+
+    & .countItem {
+        padding: 2rem;
+    }
+
+    @include mediaML {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mediaMd {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mediaSm {
+        grid-template-columns: 1fr;
+    }
+
+    & .counter {
+        font-size: 3rem;
+    }
+
+    & h3 {
+        font-size: 1.5rem;
+
+        @include mediaMd {
+            font-size: 1rem;
+        }
+    }
+
+}
+//Work Flow End

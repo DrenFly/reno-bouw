@@ -1,0 +1,28 @@
+{
+  "name": "rbrdev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DrenFly/rbrdev.git"
+  },
+  "author": "Drenfly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DrenFly/rbrdev/issues"
+  },
+  "homepage": "https://github.com/DrenFly/rbrdev#readme",
+  "dependencies": {
+    "live-server": "^1.1.0",
+    "reveal.js": "^4.3.1",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "keywords": [],
+  "description": ""
+}

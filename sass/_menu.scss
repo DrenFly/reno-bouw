@@ -1,0 +1,269 @@
+
+
+
+
+
+.mobnav {
+  width: 100%;
+  
+}
+
+.menu-btn {
+  position: fixed;
+  z-index: 9;
+  right: 35px;
+  top: 25px;
+  cursor: pointer;
+  @include easeOut;
+  visibility: hidden;
+  
+
+  @include mediaSm {
+    visibility: visible;
+    right: 35px;
+    top: 13px;
+  }
+  @include mediaMd {
+    visibility: visible;
+    right: 35px;
+    top: 13px;
+  }
+
+  @include mediaML {
+    visibility: visible;
+    right: 35px;
+    top: 13px;
+  }
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: $color2;
+    @include easeOut;
+  }
+
+  // Rotate Into X With Menu Lines
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      // Line 1 - Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+
+        @include mediaLg {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+      }
+
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+
+        @include mediaLg {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  visibility: hidden;
+  z-index: 8;
+  font-size: 1.6rem;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-brand,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($color1, 5);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &-brand {
+    background-image: url("../img/RBR214.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate3d(0, 100%, 0);
+
+    @include easeOut;
+
+    @include mediaSm {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    @include mediaMd {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $color2;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 400;
+    color: #eeeeee;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $color2;
+    }
+
+    @include mediaMd {
+      font-size: 2rem;
+    }
+
+    @include mediaSm {
+      font-size: 2rem;
+    }
+  }
+}
+
+//Delay setting
+@for $x from 1 through 7 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
+
+.graph {
+  font-size: 5rem;
+  padding: 20px;
+  border: solid 5px $color2;
+  //height: 20rem;
+  color: #eeeeee;
+
+  .letCol {
+    color: $color2;
+  }
+
+  @include mediaML {
+    padding: 1rem;
+  }
+}
+
+@include mediaMd {
+  .menu-nav,
+  div.menu-1 {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-brand {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .graph {
+      font-size: 2rem;
+      width: min-content;
+      height: min-content;
+      text-align: center;
+      justify-content: center;
+      padding: 10px;
+      text-align: justify;
+    }
+  }
+}
+
+@include mediaSm {
+  .menu-nav,
+  div.menu-1 {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-brand {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .graph {
+      font-size: 2rem;
+      width: min-content;
+      height: min-content;
+      text-align: center;
+      justify-content: center;
+      padding: 10px;
+      text-align: justify;
+    }
+  }
+}

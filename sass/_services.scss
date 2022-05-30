@@ -1,0 +1,78 @@
+//Services Start
+
+.main-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto min-content min-content;
+    background-color: #eeeeee;
+    align-items: center;
+    text-align: center;
+    color: $color1;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    @include mediaML {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto min-content min-content min-content;
+    }
+
+    @include mediaMd {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto min-content min-content min-content;
+    }
+
+    @include mediaSm {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(6, auto);
+    }
+
+    .servHead {
+        grid-column: 1 /span 3;
+        grid-row: 1;
+        text-align: center;
+        font-size: 3rem;
+        padding-bottom: 3rem;
+
+        
+
+        @include mediaML {
+            grid-column: 1 /span 2;
+            grid-row: 1;
+            text-align: center;
+        }
+
+        @include mediaMd {
+            grid-column: 1 /span 2;
+            grid-row: 1;
+            text-align: center;
+        }
+
+        @include mediaSm {
+            grid-column: 1;
+            grid-row: 1;
+            text-align: center;
+        }
+    }
+
+    & .box {
+        
+        font-size: 1.4rem;
+        padding: 2rem;
+        display: grid;
+        grid-template-rows: 100px 50px 150px;
+        align-items: center;
+        transition: opacity 1400ms ease-in;
+        opacity: 0;
+        
+
+        &.view {
+            opacity: 1;
+            
+        }
+    }
+}
+
+i {
+    z-index: 1;
+}
+//Services End

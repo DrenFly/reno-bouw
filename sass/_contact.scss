@@ -1,0 +1,250 @@
+
+#contact {
+    background-color: #ffffff;
+}
+
+.concontainer {
+    width: auto;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    padding: 3rem;
+    font-size: 2rem;
+}
+
+.contacttop {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: $color3;
+
+    & p {
+        max-width: 80%;
+
+        @include mediaSm{
+            max-width: 100%;
+        }
+    }
+    
+}
+
+.regularform {
+    
+    
+
+    // .modal {
+    //     max-width: 50ch;
+      
+    //     & > * {
+    //       margin: 0 0 0.5rem 0;
+    //     }
+    // }
+
+
+    & #contactform {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr) min-content 1fr;
+    row-gap: 5px;
+    background-color: $color3;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    
+
+    @include mediaML {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr) min-content 1fr auto;
+    }
+
+    @include mediaMd {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr) min-content 1fr auto;
+    }
+
+    @include mediaSm {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr) min-content 1fr auto;
+    }
+    
+
+        & .forminput1 {
+            display: flex;
+            flex-direction: column;
+            grid-row: 1;
+            grid-column: 1;
+
+            @include mediaML {
+                grid-row: 1;
+            }
+            
+        }
+
+        & .forminput2 {
+            display: flex;
+            flex-direction: column;
+            grid-row: 2;
+            grid-column: 1;
+
+            @include mediaML {
+                grid-row: 2;
+            }
+        }
+
+        & .forminput3 {
+            display: flex;
+            flex-direction: column;
+            grid-row: 3;
+            grid-column: 1;            
+        }
+
+        & .sendMess {
+            cursor: pointer;
+        }
+
+        & .map {
+            grid-row: 1 / span 4;
+            grid-column: 2 /span 2;
+            width: 70%;
+            height: 100%;
+            margin: auto;
+            
+        }
+
+        .nameinput {
+            border: none;
+            border-radius: 0%;
+            height: 3rem;
+
+            &:focus {
+                border: 2px $color2 solid;
+                border-radius: 0px;
+                
+            }
+        }
+
+        .emailinput {
+            border: none;
+            border-radius: 0%;
+            height: 3rem;
+
+            &:focus {
+                border: 2px $color2 solid;
+                border-radius: 0px;
+                
+            }
+        }
+
+        .message {
+            border: none;
+            border-radius: 0%;
+            
+
+            &:focus {
+                border: 2px $color2 solid;
+                border-radius: 0%;
+                
+            }
+        }
+    }
+
+    & .sendMess {
+        grid-row: 4;
+        grid-column: 1;
+        font-size: 1.5rem;
+        justify-self: center;
+        border: none;
+        border-radius: 0px;
+        padding: 1rem;
+        margin-top: 1rem;
+        background-color: $color1;
+        color: $color2;
+        @include easeOut;
+
+        &:hover {
+            background-color: lighten($color1, 7);
+            color: lighten($color2, 7);
+        }
+    }
+    
+}
+
+.modal {
+    
+    border-radius: 0.25rem;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.8);      
+    text-align: center;
+    justify-content: center;
+    border: 0;
+    animation: fadeOutOpacity 500ms forwards;
+    overflow: hidden;
+    margin: 0;
+    
+
+    & .modalInner {        
+        position: relative;
+        width: 30%;
+        min-width: 400px;        
+        margin-top: 15rem;
+        left: 35%;       
+        padding: 3rem;
+        background-color: $color4; 
+        
+        @include mediaSm {
+            left: 15%;
+            min-width: 300px;
+        }
+        
+        @include mediaMd {
+            left: 20%
+        }
+
+        @include mediaML {
+            left: 25%
+        }
+
+        & h2 {
+            padding: 1rem;
+        }
+
+        & p {
+            padding: 1rem;
+        }
+    }
+
+
+    
+    & .close1 {
+        font-size: 2rem;
+        background-color: $color1;
+        color: $color2;
+        border: 0;
+        padding: 10px 20px;
+        @include easeOut;
+
+        &:hover  {
+            background-color: lighten($color1,  $amount: 10);
+        }
+    }
+
+
+}
+.modal::backdrop {
+    background: rgba(black, 0.5);
+    opacity: 0;
+}
+
+.modal[open] {
+    animation: slideUp 1000ms forwards, fadeInOpacity 500ms forwards;
+    
+}
+
+.modal[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: fadeOutOpacity 500ms forwards;
+}

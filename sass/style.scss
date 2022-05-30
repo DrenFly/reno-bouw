@@ -1,0 +1,337 @@
+@import "config";
+@import "menu";
+@import "about";
+@import "services";
+@import "gallery";
+@import "testimonials";
+@import "workFlow";
+@import "contact";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+    max-width: 1920px;
+    margin: auto;
+    font-size: 10px;
+    
+    &::-webkit-scrollbar {
+        background: $color1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color2;
+        border-radius: 100vw;
+        @include easeOut;
+
+        &:hover {
+            background-color: lighten($color2, 10);
+        }
+    }
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;    
+    
+}
+
+//Main Nav Start
+.main-nav {
+    position: fixed;
+    overflow: hidden;
+    top: 0%;
+    width: 100%;
+    max-width: 1920px;
+    height: 5rem;
+    background-color: rgba($color1, $alpha: 0.9);
+    color: $color2;
+    z-index: 2;
+    @include easeOut;   
+    
+    & ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+        margin: 0px;
+        font-size: 1.4rem; 
+        
+        
+        @include mediaSm {
+            justify-content:left;
+        }
+
+        @include mediaMd {
+            justify-content:left;
+        }
+    }
+
+    & .mainNav-item {
+
+        @include mediaSm {
+            display: none;
+        }
+        
+        @include mediaMd {
+            //visibility: hidden;
+            display: none;
+        }
+
+        @include mediaML {
+            visibility: hidden;
+            
+        }
+
+        @include mediaLg {
+            justify-content: left;
+            font-size: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #eeeeee;
+            text-transform: uppercase;
+            @include easeOut;
+
+            
+            
+            &:hover {
+                color:$color2;
+            }
+        }
+    }
+
+    .siteicon {
+        max-width: 4rem;
+        align-self: center;
+        
+    }
+
+    .callus {
+        font-size: 2rem;
+
+        @include mediaSm {
+            display: block;
+            visibility: visible;
+            justify-self: center;
+            padding-left: 1rem;
+        }
+
+        @include mediaMd {
+            display: block;
+            visibility: visible;
+            justify-self: center;
+            padding-left: 1rem;
+        }
+
+        @include mediaML {
+            display: block;
+            visibility: visible;
+            justify-self: center;
+        }
+    }
+}
+//Main Nav End
+
+//Main Content Start
+
+.container {
+    margin: auto;
+    overflow: auto;
+    max-width: 1920px;
+     
+    
+    
+
+    & .main-header {   
+        
+        background-image: url("../img/header.webp");
+        background-size: cover;
+        
+        
+
+        & .filter {
+            background-color: rgba($color3, 0.2);
+            min-height: 100%;
+            min-width: 100%;
+            padding: 10rem 0;
+            color: #eeeeee;
+            display: grid;
+            grid-template-columns: 90% 10%; 
+            grid-template-rows: min-content min-content; 
+            align-items: center;           
+            
+        
+            .heading {
+                font-size: clamp(2.3rem, 5vw, 5rem);
+                padding-left: 3rem;
+                grid-column: 1;
+                grid-row: 1;
+                @include fade-in;
+
+                .letCol {
+                    color: $color2;
+                }
+
+                @include mediaSm {                    
+                    text-align: center;
+                    padding: 0 1rem;
+                    line-height: normal;
+                }
+
+            
+            }
+
+            .tagline {
+                font-size: clamp(1.5rem, 2.5vw, 5.5rem);
+                padding: 2rem 0;
+                border-bottom: $color2 1px solid;
+                
+                @include fade-in1;
+
+                @include mediaSm {
+                    text-align: center;
+                    padding: 1.5rem 0;
+                }
+
+            
+            }
+
+            .tagline2 {
+                font-size: clamp(1rem, 2vw, 5rem);
+                padding-left: 3rem;
+                padding-top: 3rem;
+                grid-column: 1;
+                grid-row: 2;
+                
+                @include fade-in2;
+
+                @include mediaSm {
+                    justify-self: center;
+                    padding-left: 3rem;
+                    padding-top: 1.5rem;
+                }
+
+                
+            }
+
+            & .social {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem;
+                font-size: 2rem;
+                grid-column: 2;
+                grid-row: 1 / span 2;
+                height: 100%;
+                
+
+                @include mediaSm {
+                    font-size: 1rem;
+                    text-align: center;
+                    padding: 2rem;
+                }
+
+                @include mediaMd {
+                    font-size: 1.4rem;               
+                
+                }
+                & .socItem {
+                    @include easeOut;
+        
+                    & a {
+                    color: $color2;
+
+                    & i {
+                        z-index: 1;
+                        @include easeOut;
+                    }
+                    
+                    &:hover {
+                        color: lighten($color2, 15);
+                    }
+                    }
+                    
+                }
+            }
+        
+        }
+        
+    }
+
+    
+}
+
+//Main Header End
+
+
+//Footer Start
+footer {
+    text-align: center;
+    background-color: $color1;
+    color: #eeeeee;
+    position: relative;
+    height: auto;
+    padding: 2rem 0;
+    font-size: 2rem;
+    
+
+    & .footHead {
+        font-size: 3rem;
+        padding: 3rem 0;
+
+        @include mediaSm {
+            font-size: 2rem;
+        }
+    }
+
+    & a {
+        color: #eeeeee;
+        text-decoration: none;
+        @include easeOut;
+
+        &:hover {
+            color: $color2;
+        }
+    }
+
+    & .socLead {
+        padding-top: 2rem;
+        border-top: 2px $color2 solid;
+    }
+
+    & .social {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-around;
+        padding: 2rem;
+        
+        & .socItem {
+
+            & a {
+              color: $color2;
+              
+              
+              &:hover {
+                  color: lighten($color2, 15);
+              }
+            }
+            
+        }
+    }
+}
+//Footer End

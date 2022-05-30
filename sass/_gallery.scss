@@ -1,0 +1,283 @@
+//Gallery Start
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px repeat(8, auto);
+    background-color: $color1;
+    padding: 6rem 3rem;
+    
+    
+
+    & h1 {
+        grid-column: 1 / span 3;
+        color: $color2;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    a {
+        width: 100%; 
+        height: 100%; 
+    }
+
+    .gallimg {
+        width: 100%; 
+        height: 100%;
+        overflow: auto;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+
+    .gallimg1 {
+        grid-column: 1;
+        grid-row: 2 /span 2;
+    }
+
+    .gallimg2 {
+        grid-column: 2;
+        grid-row: 2 /span 2;
+    }
+
+    .gallimg3 {
+        grid-column: 3;
+        grid-row: 2 /span 2;
+    }
+
+    .gallimg4 {
+        grid-column: 1;
+        grid-row: 4 /span 2;
+    }
+
+    .gallimg5 {
+        grid-column: 2;
+        grid-row: 4 / span 2;
+    }
+
+    .gallimg6 {
+        grid-column: 3;
+        grid-row: 4 /span 2;
+    }
+
+    .gallimg7 {
+        grid-column: 1;
+        grid-row: 6 /span 2;
+    }
+
+    .gallimg8 {
+        grid-column: 2;
+        grid-row: 6 /span 2;
+    }
+
+    .gallimg9 {
+        grid-column: 3;
+        grid-row: 6 /span 2;
+    }
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 1000ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    
+    
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+    
+    
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: $color2;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 3rem;
+    z-index: 10;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    @include mediaML {
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    @include mediaMd {
+        font-size: 1.8rem;
+        padding-top: 1rem;
+    }
+
+    @include mediaSm {
+        font-size: 1.8rem;
+        text-align: center;
+        padding-top: 1rem;
+    }
+    
+}
+
+.popup {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transition: all 2s ease-in-out;
+    z-index: 10;
+    
+    @include mediaMd {
+        padding: 0px;
+        
+    }
+    
+    @include mediaSm {
+        padding: 0px;
+        background: rgba(0, 0, 0, 0.9);
+    }
+    
+  }
+
+.popup__img {
+    object-fit: contain;
+}
+
+.popup .content .popup__img {    
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    overflow: auto;
+    
+}  
+
+.content {    
+    object-fit: contain;
+    height: 80vh;
+    width: 95vw;
+
+    @include mediaMd {
+        width: 100vw;
+    }
+
+    @include mediaSm {
+        width: 100vw;
+    }
+    
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    height: auto;
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: color 500ms ease-in-out;
+
+    @include mediaMd {
+        font-size: 3rem;
+        top: 5px;
+        right: -10px;
+    }
+
+    @include mediaSm {
+        font-size: 3rem;
+        top: 5px;
+        right: -10px;
+    }
+  }
+
+  .popup .last {
+    position: absolute;
+    top: 10px;
+    right: -80px;
+    height: auto;
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: color 500ms ease-in-out;
+
+    @include mediaMd {
+        font-size: 3rem;
+        top: 5px;
+        right: -40px;
+    }
+
+    @include mediaSm {
+        font-size: 3rem;
+        top: 5px;
+        right: -40px;
+    }
+  }
+
+  .popup .next {
+    position: absolute;
+    top: 10px;
+    right: -130px;
+    height: auto;
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: color 500ms ease-in-out;
+
+    @include mediaMd {
+        font-size: 3rem;
+        top: 5px;
+        right: -65px;
+    }
+
+    @include mediaSm {
+        font-size: 3rem;
+        top: 5px;
+        right: -65px;
+    }
+  }
+
+  .close:hover, .last:hover, .next:hover {
+      color: $color2;
+      
+  }
+
+  .socialLead {
+      color: $color2;
+      grid-row: 9;
+      grid-column: 1 / span 3;
+      align-items: center;
+      text-align: center;
+      padding: 6rem 0;
+      font-size: 2rem;
+
+      @include mediaSm {
+          font-size: 1.4rem;
+      }
+
+      & h2 {
+          padding-bottom: 3rem;
+      }
+
+      & img {
+          width: auto;
+          height: 50px;
+          
+      }
+  }
+
+//Gallery End

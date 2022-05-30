@@ -1,0 +1,168 @@
+.about {
+    background-color: $color3;
+    padding: 9rem 3rem;
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px auto;
+    gap: 1rem;
+    text-align: center;
+    
+
+    @include mediaML {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px auto;
+        padding: 9rem 3rem;
+    }
+
+    @include mediaMd {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px auto;
+        padding: 9rem 2rem;
+    }
+
+    @include mediaSm {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px auto;
+        padding: 9rem 1rem;
+    }
+
+    .aboutpic {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        max-height: 35rem;
+        max-width: 26rem;
+        justify-self: center;
+
+        @include mediaML {
+            height: 100%;
+            grid-column: 3 / span 2;
+            align-self: center;
+            justify-self: center;
+            
+        }
+
+        @include mediaMd {
+            display: none;
+            
+        }
+
+        @include mediaSm {
+            display: none;
+            
+        }
+    }
+
+    .aboutpic2 {
+        display: none;
+        
+        @include mediaMd {
+            visibility: visible;
+            display: block;
+            grid-column: 3 /span 2;
+            grid-row: 1 / span 2;
+            padding: 2rem
+            
+        }
+
+        @include mediaSm {
+            visibility: visible;
+            grid-column: 3 /span 2;
+            grid-row: 1 / span 2;
+            
+        }
+    }
+    
+    .aboutus {
+        grid-column: 1 / span 2;
+        justify-self: center;
+        
+
+        & p {
+            padding: 2rem;
+            text-align: justify;
+           
+
+            @include mediaML {
+                padding-right:1rem;
+                margin-right: 1rem;
+            }
+
+            @include mediaMd {
+                padding-bottom: 1rem;
+                margin-right: 0rem;
+                
+            }
+
+            @include mediaSm {
+                margin-right: 0rem;
+                
+            }
+        }
+
+        @include mediaMd {
+            padding-right:0rem;
+            margin-right: 0rem;
+            grid-column: 1 / span 4;
+        }
+
+        @include mediaSm {
+            padding-right:0rem;
+            margin-right: 0rem;
+            grid-column: 1 / span 4;
+        }
+    }
+
+    h1 {
+        grid-column: 1 / span 2;
+        align-self: center;
+        text-align: center;
+
+        @include mediaMd {
+            grid-row: 1 / span 2;
+        }
+
+        @include mediaSm {
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 4;
+            justify-self: center;
+        }
+        
+    }
+
+    p {
+        padding:10px 0;
+    }
+
+    img {
+        width: 100%;
+           
+    }
+
+    & button {
+        cursor: pointer;
+        background-color: $color1;
+        color: $color2;
+        border: 0;
+        padding: 10px 20px;        
+        transition: all 0.3s ease-in-out;
+        grid-column: 1 / span 2;
+        
+
+        &:hover {
+            background-color: lighten($color1,  $amount: 10);
+            
+        }
+
+        & a {
+        font-size: 1.6rem;
+        height: 100%;
+        text-decoration: none;
+        padding: 1rem;
+        color: $color2;
+
+        
+    }
+    }    
+
+}

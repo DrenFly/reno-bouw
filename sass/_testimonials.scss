@@ -1,0 +1,202 @@
+//Testimonials Start
+.testimonials {
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    text-align: center;
+    background-image: url("../img/RBR212.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    
+    @include mediaMd {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
+
+    @include mediaSm {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        overflow: hidden;
+        background-color: rgba($color3, 0.7);
+        opacity: 0.5;
+        left: 0;
+        z-index: -1;
+    }
+
+    .cardtest {
+        background-color: rgba(238, 238, 238, 0.9);
+        padding: 5rem;
+        
+
+        @include mediaML {
+            padding: 2rem;
+        }
+
+        @include mediaMd {
+            padding: 2rem;
+        }
+
+        @include mediaSm {
+            padding: 2rem;
+        }
+        
+
+        .test1 {
+            padding: 2rem 0;
+            font-size: 3rem;
+        }
+    }
+
+    .quote1 {        
+        color: #000000;
+        grid-row: 1;
+        grid-column: 1;
+        font-size: 2rem;
+        height: 100%;
+        padding: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($color3, 0.3);
+        
+        @include mediaMd {
+            grid-row: 1;
+            grid-column: 1;
+            padding: 10% 0;
+        }
+
+        @include mediaSm {
+            grid-row: 1;
+            grid-column: 1;
+        }
+        
+    }
+
+    .quote2 {
+        color: #000000;
+        grid-row: 3;
+        grid-column: 2 / span 2;
+        font-size: 2rem;
+        align-self: center;
+        padding:3rem;        
+        background-color: rgba($color3, 0.4);
+
+        @include mediaMd {
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+        @include mediaSm {
+            grid-row: 3;
+            grid-column: 1;
+        }
+        
+    }
+
+    p {
+        padding: 0 2rem;
+        text-align: justify;
+        line-height: 2.5rem;
+        font-size: 2rem;
+
+        @include mediaML {
+            padding: 0;
+        }
+
+        @include mediaMd {
+            padding: 0;
+        }
+
+        @include mediaSm {
+            padding: 0;
+        }
+    }
+
+    .cardtest1 {
+        grid-row: 2 / span 3;
+        grid-column: 1;
+        padding: 3rem;
+        background-color: lighten($color3, 5);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+
+       @include mediaMd {
+            padding: 1rem;
+            grid-row: 4;
+            grid-column: 1;
+        }
+
+        @include mediaSm {
+            padding: 1rem;
+            grid-row: 4;
+            grid-column: 1;
+        }
+    }
+
+    .cardtest2 {
+        grid-row: 1 / span 2;
+        grid-column: 2 / span 2;
+        background-color: lighten($color2, 9);
+        align-self: center;
+
+        @include mediaMd {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        @include mediaSm {
+            grid-row: 2;
+            grid-column: 1;
+        }
+    }
+
+    .cardtest3 {
+        grid-row: 4 / span 2;
+        grid-column: 2 / span 2;
+        align-self: center;
+
+        @include mediaMd {
+            grid-row: 5;
+            grid-column: 1;
+        }
+
+        @include mediaSm {
+            grid-row: 5;
+            grid-column: 1;
+        }
+    }
+
+    .testclose {
+        grid-row: 5;
+        grid-column: 1;
+        height: 100%;
+        background-color: rgba($color3, 0.4);
+
+        & p {
+        padding: 3rem;
+        
+        
+        align-self: center;
+        }
+
+        @include mediaMd {
+            grid-row: 6;            
+        }
+
+        @include mediaSm {
+            grid-row: 6;            
+        }
+    }
+}
+//Gallery End
